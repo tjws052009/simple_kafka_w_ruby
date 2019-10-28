@@ -1,5 +1,5 @@
 GEM
-  remote: https://www.rubygems.org/
+  remote: https://rubygems.org/
   specs:
     digest-crc (0.4.1)
     ruby-kafka (0.7.10)

@@ -4,11 +4,11 @@ require 'kafka'
 require 'date'
 require 'json'
 
-KAFKA_HOST = "localhost:9092"
+KAFKA_HOST = ENV['KAFKA_HOST'] || "172.17.0.1:9092"
+TOPIC_NAME = ENV['TOPIC_NAME'] || "test"
 KAFKA_CLIENT_ID = "rubyapp"
-TOPIC_NAME = "test"
 
-loop_time = 10
+loop_time = ENV['LOOPTIME'].to_i || 10
 
 kafka = Kafka.new([KAFKA_HOST], client_id: KAFKA_CLIENT_ID)
 random = Random.new
